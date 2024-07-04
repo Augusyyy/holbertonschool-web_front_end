@@ -261,9 +261,10 @@ ul.row {
 
 .button:hover {
     color: var(--button-hover-color);
-    background-color: var(--button-hover-background);
     text-decoration: var(--button-hover-text-decoration);
-    transition: var(--transition-duration) var(--transition-cubic-bezier);
+    background: var(--button-hover-background);
+    transition-duration: var(--transition-duration);
+    transition-property: color, background-color;
 }
 
 .card-testimonial {
