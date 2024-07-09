@@ -47,6 +47,7 @@ html {
     --nav-item-display: inline-block;
     --nav-item-margin:  0 0 3rem 0;
     --nav-item-link-hover: var(--color-primary);
+    --nav-item-link-color: #ffffff;
     --section-tagline-margin: 0;
     --button-display: inline-block;
     --button-padding: 1.5rem 3rem;
@@ -158,6 +159,7 @@ a:active {
 .nav .nav-link {
     display: block;
     padding: 0.5rem 1rem;
+    color: var(--nav-item-link-color);
 }
 
 .nav .nav-link:hover {
@@ -416,3 +418,58 @@ ul.row {
     transform: translateY(0);
     }
     }
+
+    /* Floating Button */
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 15px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: var(--color-white);
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
